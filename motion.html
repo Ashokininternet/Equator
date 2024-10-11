@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        #result {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Physics Calculator</h1>
+    <form id="calcForm">
+        <label for="distance">Distance (in meters):</label>
+        <input type="number" id="distance" required>
+
+        <label for="displacement">Displacement (in meters):</label>
+        <input type="number" id="displacement" required>
+
+        <label for="velocity">Velocity (in m/s):</label>
+        <input type="number" id="velocity" required>
+
+        <label for="initialVelocity">Initial Velocity (in m/s):</label>
+        <input type="number" id="initialVelocity" required>
+
+        <label for="hours">Distance Hours:</label>
+        <input type="number" id="hours" required>
+
+        <label for="minutes">Distance Minutes:</label>
+        <input type="number" id="minutes" required>
+
+        <label for="seconds">Distance Seconds:</label>
+        <input type="number" id="seconds" required>
+
+        <label for="option">Select an option:</label>
+        <select id="option">
+            <option value="1">Speed</option>
+            <option value="2">Velocity</option>
+            <option value="3">Displacement</option>
+            <option value="4">Time</option>
+            <option value="5">Acceleration</option>
+        </select>
+
+        <button type="button" onclick="calculate()">Calculate</button>
+    </form>
+
+    <h2>Result:</h2>
+    <div id="result"></div>
+
+    <script>
+        function calculate() {
+            let d = parseFloat(document.getElementById("distance").value);
+            let s = parseFloat(document.getElementById("displacement").value);
+            let v = parseFloat(document.getElementById("velocity").value);
+            let u = parseFloat(document.getElementById("initialVelocity").value);
+            let th = parseFloat(document.getElementById("hours").value);
+            let tm = parseFloat(document.getElementById("minutes").value);
+            let ts = parseFloat(document.getElementById("seconds").value);
+
+            let total_seconds = th * 3600 + tm * 60 + ts;
+
+            function speed() {
+                return d / total_seconds;
+            }
+
+            function velocity() {
+                return s / total_seconds;
+            }
+
+            function displacement() {
+                return v * total_seconds;
+            }
+
+            function time() {
+                return s / v;
+            }
+
+            function acceleration() {
+                return (v - u) / total_seconds;
+            }
+
+            let select = parseInt(document.getElementById("option").value);
+            let result;
+
+            if (select === 1) {
+                result = speed();
+            } else if (select === 2) {
+                result = velocity();
+            } else if (select === 3) {
+                result = displacement();
+            } else if (select === 4) {
+                result = time();
+            } else if (select === 5) {
+                result = acceleration();
+            } else {
+                result = "Invalid selection.";
+            }
+
+            document.getElementById("result").innerText = "Result: " + result;
+        }
+    </script>
+</body>
+</html>
+
