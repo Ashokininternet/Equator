@@ -1,0 +1,58 @@
+✅ 1. What is the speed if a person covers 100 meters in 20 seconds?
+Distance: 100
+
+Time (seconds): 20
+
+Option: Speed (Option 1)
+
+👉 Expected Answer:
+
+Speed= Time/Distance = 20/100 = 5m/s
+
+✅ 2. What is the velocity if displacement is 60 meters in 15 seconds?
+Displacement: 60
+
+Time (seconds): 15
+
+Option: Velocity (Option 2)
+
+👉 Expected Answer:
+
+Velocity= 60/15 = 4m/s
+
+✅ 3. Find the displacement when velocity is 10 m/s and time is 6 seconds.
+Velocity: 10
+
+Time (seconds): 6
+
+Option: Displacement (Option 3)
+
+👉 Expected Answer:
+
+Displacement = 𝑣×𝑡 = 10×6 = 60m
+
+✅ 4. How much time is required to cover a displacement of 120 meters at 30 m/s?
+Displacement: 120
+
+Velocity: 30
+
+Option: Time (Option 4)
+
+👉 Expected Answer:
+
+Time= Velocity/Displacement = 120/30 = 4seconds
+
+✅ 5. What is the acceleration if initial velocity is 5 m/s, final velocity is 25 m/s, and time is 4 seconds?
+Initial Velocity: 5
+
+Velocity (Final): 25
+
+Time: 4
+
+Option: Acceleration (Option 5)
+
+👉 Expected Answer:
+
+
+Acceleration= v-u/t = 25-5/4 = 20/4 = 5m/s²
+​
