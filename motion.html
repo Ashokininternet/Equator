@@ -66,6 +66,12 @@
             margin-top: 20px;
             color: #007bff;
         }
+        #tc{
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px;
+            color: #ff0000;
+        }
     </style>
 </head>
 <body>
@@ -77,19 +83,13 @@
         <label for="displacement">Displacement (in meters):</label>
         <input type="number" id="displacement" required>
 
-        <label for="velocity">Velocity (in m/s):</label>
+        <label for="velocity">Final Velocity (in m/s):</label>
         <input type="number" id="velocity" required>
 
         <label for="initialVelocity">Initial Velocity (in m/s):</label>
         <input type="number" id="initialVelocity" required>
 
-        <label for="hours">Distance Hours:</label>
-        <input type="number" id="hours" required>
-
-        <label for="minutes">Distance Minutes:</label>
-        <input type="number" id="minutes" required>
-
-        <label for="seconds">Distance Seconds:</label>
+        <label for="seconds">Time Seconds:</label>
         <input type="number" id="seconds" required>
 
         <label for="option">Select an option:</label>
@@ -106,6 +106,7 @@
 
     <h2>Result:</h2>
     <div id="result"></div>
+   <div id="tc">Please enter the values you have, then select the correct option to perform the calculation.</div>
 
     <script>
         function calculate() {
@@ -113,22 +114,19 @@
             let s = parseFloat(document.getElementById("displacement").value);
             let v = parseFloat(document.getElementById("velocity").value);
             let u = parseFloat(document.getElementById("initialVelocity").value);
-            let th = parseFloat(document.getElementById("hours").value);
-            let tm = parseFloat(document.getElementById("minutes").value);
             let ts = parseFloat(document.getElementById("seconds").value);
 
-            let total_seconds = th * 3600 + tm * 60 + ts;
 
             function speed() {
-                return d / total_seconds;
+                return d / ts;
             }
 
             function velocity() {
-                return s / total_seconds;
+                return s / ts;
             }
 
             function displacement() {
-                return v * total_seconds;
+                return v * ts;
             }
 
             function time() {
@@ -136,22 +134,22 @@
             }
 
             function acceleration() {
-                return (v - u) / total_seconds;
+                return (v - u) / ts;
             }
 
             let select = parseInt(document.getElementById("option").value);
             let result;
 
             if (select === 1) {
-                result = speed();
+                result = speed() + "m/s";
             } else if (select === 2) {
-                result = velocity();
+                result = velocity() + "m/s";
             } else if (select === 3) {
-                result = displacement();
+                result = displacement() + "m";
             } else if (select === 4) {
-                result = time();
+                result = time() + "seconds";
             } else if (select === 5) {
-                result = acceleration();
+                result = acceleration() + " m/s²";
             } else {
                 result = "Invalid selection.";
             }
