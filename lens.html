@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Lens equation</h1>
+    <form id="calcForm">
+        <label for="focal-length">Focal length (in cm):</label>
+        <input type="number" id="f" required>
+
+        <label for="u">Distance to the object [U] (in cm):</label>
+        <input type="number" id="u" required>
+
+        <label for="v">Distance to the image [V] (in cm):</label>
+        <input type="number" id="v" required>
+
+        <label for="hi">Height of the image [hi] (in cm):</label>
+        <input type="number" id="hi" required>
+
+        <label for="ho">Height of the object [ho] (in cm):</label>
+        <input type="number" id="ho" required>
+
+        <label for="option">Select an option:</label>
+        <select id="option">
+            <option value="1">Focal length</option>
+            <option value="2">Magnification</option>
+            <option value="3">Power</option>
+        </select>
+
+        <button type="button" onclick="calculate()">Calculate</button>
+    </form>
+
+    <h2>Result:</h2>
+
+   <div id="result"></div>
+   <div id="tc">Please enter the values you have, then select the correct option to perform the calculation.</div>
+   <h1>More options</h1>
+    <div id="more-options">
+    <a href="lens.html"><button id="opt-btn">Lens</button></a>
+    <a href="main.html"><button id="opt-btn">Equations of motion</button></a>
+   </div>
+   <script src="lens.js"></script>
+</body>
+</html>
