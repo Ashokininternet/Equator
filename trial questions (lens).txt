@@ -1,0 +1,52 @@
+1. Focal length calculation
+
+Question:
+An object is placed 30 cm from a lens, and its image is formed 60 cm on the other side. What is the focal length of the lens?
+
+Given:
+
+u = -30 cm (object distance is negative in Cartesian convention)
+
+v = 60 cm
+
+✅ In your calculator, enter u = 30, v = 60 → f = 20 cm (if you ignore the sign convention for simplicity).
+
+2. Magnification using heights
+
+Question:
+An object of height 5 cm forms an image of height 10 cm. What is the magnification?
+
+
+✅ Enter ho = 5, hi = 10 → magnification = 2
+
+3. Magnification using distances
+
+Question:
+Object distance = 20 cm, image distance = 40 cm. Find magnification.
+
+
+✅ Enter u = 20, v = 40 → magnification = 2
+
+4. Lens power
+
+Question:
+A convex lens has a focal length of 25 cm. Find its power.
+
+
+✅ Enter f = 25 → power = 4 D
+
+5. Combined check
+
+u = 15 cm, v = 30 cm
+
+ho = 4 cm, hi = 8 cm
+
+f = leave empty
+
+Expected results:
+
+Focal length: 30 cm
+
+Magnification: 2
+
+Power: 100/30 ≈ 3.33 D

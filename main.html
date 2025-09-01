@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Physics Calculator</h1>
+    <form id="calcForm">
+        <label for="distance">Distance (in meters):</label>
+        <input type="number" id="distance" required>
+
+        <label for="displacement">Displacement (in meters):</label>
+        <input type="number" id="displacement" required>
+
+        <label for="velocity">Final Velocity (in m/s):</label>
+        <input type="number" id="velocity" required>
+
+        <label for="initialVelocity">Initial Velocity (in m/s):</label>
+        <input type="number" id="initialVelocity" required>
+
+        <label for="seconds">Time Seconds:</label>
+        <input type="number" id="seconds" required>
+
+        <label for="option">Select an option:</label>
+        <select id="option">
+            <option value="1">Speed</option>
+            <option value="2">Velocity</option>
+            <option value="3">Displacement</option>
+            <option value="4">Time</option>
+            <option value="5">Acceleration</option>
+        </select>
+
+        <button type="button" onclick="calculate()">Calculate</button>
+    </form>
+
+    <h2>Result:</h2>
+    <div id="result"></div>
+   <div id="tc">Please enter the values you have, then select the correct option to perform the calculation.</div>
+   <h1>More options</h1>
+   <div id="more-options">
+    <a href="lens.html"><button id="opt-btn">Lens</button></a>
+    <a href="main.html"><button id="opt-btn">Equations of motion</button></a>
+   </div>
+   
+
+    <script src="equation.js"></script>
+</body>
+</html>
+
