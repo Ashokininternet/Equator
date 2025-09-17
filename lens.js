@@ -12,7 +12,7 @@ function calculate() {
 
             function magnification() {
                 let mag1 = (!isNaN(hi) && !isNaN(ho) && ho !== 0) ? hi / ho : NaN;
-                let mag2 = (!isNaN(v) && !isNaN(u) && v !== 0) ? v / u : NaN;   
+                let mag2 = (!isNaN(v) && !isNaN(u) && v !== 0) ? v / u : NaN;
                 return !isNaN(mag1) ? mag1 : mag2;
             }
 
@@ -27,11 +27,11 @@ function calculate() {
 
 // just adding the unit
             if (select === 1) {
-                result = focalLength() + "cm";
+                result = focalLength() + " cm";
             } else if (select === 2) {
                 result = magnification();
             } else if (select === 3) {
-                result = power() + "D";
+                result = power() + " D";
             } 
 
             document.getElementById("result").innerText = "Result: " + result;

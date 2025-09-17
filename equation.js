@@ -30,11 +30,11 @@ function calculate() {
             let result;
 
             if (select === 1) {
-                result = speed() + "m/s";
+                result = speed() + " m/s";
             } else if (select === 2) {
-                result = velocity() + "m/s";
+                result = velocity() + " m/s";
             } else if (select === 3) {
-                result = displacement() + "m";
+                result = displacement() + " m";
             } else if (select === 4) {
                 result = time() + "seconds";
             } else if (select === 5) {
