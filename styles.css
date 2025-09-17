@@ -2,7 +2,6 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
-    padding: 20px;
     }
 
 h1 {
@@ -68,10 +67,16 @@ h2 {
     color: #ff0000;
     }
 
-#opt-btn{
-    width: 10%;
-}
 #more-options{
-    display: block;
-    margin: 10px 0 5px;
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+}
+#a{
+    text-decoration: none;
+    color:#333;
+}
+#a:hover{
+    color: #28a745;
+    cursor: pointer;
 }
